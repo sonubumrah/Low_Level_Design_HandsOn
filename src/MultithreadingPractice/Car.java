@@ -3,7 +3,7 @@ package MultithreadingPractice;
 public class Car {
     int price;
     String name;
-    Car(int price, String name){
+    public Car(int price, String name){
         this.price=price;
         this.name=name;
     }
