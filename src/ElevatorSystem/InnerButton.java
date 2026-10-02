@@ -1,20 +1,23 @@
 package ElevatorSystem;
 
-public class InnerButton implements Button {
-    private char buttonNumber;
+import java.util.List;
 
-    public InnerButton(char buttonNumber) {
-        this.buttonNumber = buttonNumber;
+public class InnerButton  {
+    private List<Floor> floors;
+    ElevatorController elevatorController;
+
+
+    public InnerButton(List<Floor> floors, ElevatorController elevatorController) {
+        this.elevatorController = elevatorController;
+        this.floors = floors;
     }
-    public char getButtonNumber() {
-        return buttonNumber;
-    }
-    public void setButtonNumber(char buttonNumber) {
-        this.buttonNumber = buttonNumber;
+    public Floor getFloorNumber(int floorNumber) {
+        return floors.get(floorNumber);
     }
 
-    @Override
-    public void press() {
-        System.out.println("Inner button " + buttonNumber + " pressed.");
+
+    public void press(int floorNumber) {
+        System.out.println("Inner button for floor " + floorNumber + " pressed.");
+        elevatorController.submitRequest(new InternalElevatorRequest("1",floorNumber, "idempotencyKey", java.time.LocalDateTime.now()));
     }
 }
