@@ -6,8 +6,7 @@ public class ExternalDispatcher {
     public ExternalDispatcher(ElevatorSchedular elevatorSchedular) {
         this.elevatorSchedular = elevatorSchedular;
     }
-    public void submitExternalRequest(ExternalElevatorRequest externalElevatorRequest) {
-       // Elevator selectedElevator = elevatorSchedular.getElevatorSelectionStrategy().selectElevator(elevatorSchedular.getElevatorControllers(), externalElevatorRequest);
-        // Process the request with the selected elevator
+    public ElevatorController submitExternalRequest(ExternalElevatorRequest externalElevatorRequest) {
+        return elevatorSchedular.assignElevator(externalElevatorRequest);
     }
 }

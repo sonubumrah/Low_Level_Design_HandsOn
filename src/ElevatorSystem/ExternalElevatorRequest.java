@@ -12,5 +12,17 @@ public class ExternalElevatorRequest {
         this.timestamp = timestamp;
         this.direction = direction;
     }
+    public int getFloor() {
+        return floor;
+    }
+    public Direction getDirection() {
+        return direction;
+    }
+    public String getIdempotencyKey() {
+        return idempotencyKey;
+    }
+    public long getTimestamp() {
+        return timestamp;
+    }
 
 }

@@ -2,5 +2,6 @@ package ElevatorSystem;
 
 public enum Direction {
     UP,
-    DOWN
+    DOWN,
+    IDLE
 }
