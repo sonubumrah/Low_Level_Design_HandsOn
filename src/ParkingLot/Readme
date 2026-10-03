@@ -1,0 +1,7 @@
+LLD of Parking Lot
+Function Requirements
+1.There will be multi store building
+2. There will be one Entry Point and Exit point at ground Floor
+3. Each FLoor has Parking capacity
+4. For Now it will support two and four wheelers
+5. Bill will generate on hourly basis
